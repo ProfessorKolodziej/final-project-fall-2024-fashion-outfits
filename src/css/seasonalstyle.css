@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 
 body {
-	background-color: #D02E85;
+	background-color: #CF92FF;
 }
 
 h1 {
@@ -24,7 +24,7 @@ h2 {
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: #000;
 	font-family: "Jersey 25";
-	font-size: 50px;
+	font-size: 40px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
@@ -48,14 +48,18 @@ img {
 	border: #000 3px solid;
 }
 
-.seasonaloutfits {
+.springoutfit {
 	text-align: center;
 }
 
-.sevendaysofoutfits {
+.summeroutfit {
 	text-align: center;
 }
 
-.buildyourownoutfit {
+.falloutfit {
+	text-align: center;
+}
+
+.winteroutfit {
 	text-align: center;
 }
