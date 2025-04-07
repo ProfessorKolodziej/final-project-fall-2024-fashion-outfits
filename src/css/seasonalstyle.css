@@ -41,6 +41,8 @@ h3 {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+
+	/*  place hover feature csss here */
 }
 
 img {
@@ -62,4 +64,10 @@ img {
 
 .winteroutfit {
 	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	border: #000 2px solid;
+	display: block;
 }
