@@ -14,7 +14,7 @@ h1 {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	padding: 5% 5% 0% 5%;
+	padding: 3% 5% 0% 5%;
 
 }
 
@@ -43,9 +43,16 @@ h3 {
 	line-height: normal;
 }
 
+
+h3:hover {
+	background-color: #ef8dc1;
+	padding: 2%;
+}
+
 img {
 	max-width: 50%;
-	border: #000 3px solid;
+	border: #000 5px solid;
+	margin-top: 5%;
 }
 
 .seasonaloutfits {
@@ -58,4 +65,11 @@ img {
 
 .buildyourownoutfit {
 	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	border: #000 10px double;
+	display: block;
+	margin: 4% 20% 5% 20%;
 }
