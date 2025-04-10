@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+.spring-container {
+	background-color: #FFCFE9;
+
+}
+
+.springoutfit {
+	text-align: center;
+}
+
+.summer-container {
+	background-color: #FFD699;
+}
+
+.summeroutfit {
+	text-align: center;
+}
+
+.fall-container {
+	background-color: #D2FFD3;
+}
+
+.falloutfit {
+	text-align: center;
+}
+
+.winter-container {
+	background-color: #C0FFF0;
+	;
+}
+
+.winteroutfit {
+	text-align: center;
+}
+
+.content-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+h3 {
+	color: #FFF;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #000;
+	font-family: "Jersey 25";
+	font-size: 55px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+
+}
+
+img {
+	max-width: 50%;
+	border: #000 5px solid;
+	margin-top: 5%;
+
+}
+
+p {
+	color: #000;
+	font-family: "Jersey 25";
+	font-size: 25px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	float: left;
+	text-align: center;
+}
