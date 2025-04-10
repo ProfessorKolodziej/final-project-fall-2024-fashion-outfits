@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 
+/* seasonal outfits start */
 body {
-	background-color: #CF92FF;
 	text-align: center;
+}
+
+.seasonal-container {
+	background-color: #CF92FF;
 }
 
 h1 {
@@ -51,7 +55,7 @@ h3:hover {
 }
 
 img {
-	max-width: 50%;
+	max-width: 60%;
 	border: #000 5px solid;
 	margin-top: 5%;
 
@@ -79,3 +83,43 @@ a {
 	display: block;
 	margin: 4% 20% 5% 20%;
 }
+
+/* seasonal outfits end*/
+
+/* 7 days of outfits start */
+
+.sevendays-container {
+	background-color: #B557FF;
+}
+
+.dayone-hover:hover {
+	background-color: #d6a8f9;
+}
+
+.daytwo-hover:hover {
+	background-color: #d6a8f9;
+}
+
+.daythree-hover:hover {
+	background-color: #d6a8f9;
+}
+
+.dayfour-hover:hover {
+	background-color: #d6a8f9;
+}
+
+.dayfive-hover:hover {
+	background-color: #d6a8f9;
+}
+
+.daysix-hover:hover {
+	background-color: #d6a8f9;
+}
+
+.dayseven-hover:hover {
+	background-color: #d6a8f9;
+}
+
+
+
+/* 7 days of outfits end */
