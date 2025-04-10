@@ -2,6 +2,7 @@
 
 body {
 	background-color: #CF92FF;
+	text-align: center;
 }
 
 h1 {
@@ -14,7 +15,7 @@ h1 {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	padding: 5% 5% 0% 5%;
+	padding: 3% 5% 0% 5%;
 
 }
 
@@ -42,12 +43,18 @@ h3 {
 	font-weight: 400;
 	line-height: normal;
 
-	/*  place hover feature csss here */
+}
+
+h3:hover {
+	background-color: #e0b6ff;
+	padding: 2%;
 }
 
 img {
 	max-width: 50%;
-	border: #000 3px solid;
+	border: #000 5px solid;
+	margin-top: 5%;
+
 }
 
 .springoutfit {
@@ -68,6 +75,7 @@ img {
 
 a {
 	text-decoration: none;
-	border: #000 2px solid;
+	border: #000 10px double;
 	display: block;
+	margin: 4% 20% 5% 20%;
 }
