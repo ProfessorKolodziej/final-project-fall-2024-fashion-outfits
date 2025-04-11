@@ -49,9 +49,9 @@ h3 {
 
 }
 
-h3:hover {
+a:hover {
 	background-color: #e0b6ff;
-	padding: 2%;
+
 }
 
 img {
@@ -91,35 +91,6 @@ a {
 .sevendays-container {
 	background-color: #B557FF;
 }
-
-.dayone-hover:hover {
-	background-color: #d6a8f9;
-}
-
-.daytwo-hover:hover {
-	background-color: #d6a8f9;
-}
-
-.daythree-hover:hover {
-	background-color: #d6a8f9;
-}
-
-.dayfour-hover:hover {
-	background-color: #d6a8f9;
-}
-
-.dayfive-hover:hover {
-	background-color: #d6a8f9;
-}
-
-.daysix-hover:hover {
-	background-color: #d6a8f9;
-}
-
-.dayseven-hover:hover {
-	background-color: #d6a8f9;
-}
-
 
 
 /* 7 days of outfits end */
