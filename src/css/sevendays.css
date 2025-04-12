@@ -1,1 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+body {
+	text-align: center;
+	background-color: #FEFFCD;
+	padding-bottom: 10%;
+
+
+}
+
+h1 {
+	color: #FFF;
+	text-align: center;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: #000;
+	font-family: "Jersey 25";
+	font-size: 65px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	padding: 3% 5% 0% 5%;
+}
+
+h3 {
+	color: #FFF;
+	text-align: center;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #000;
+	font-family: "Jersey 25";
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+
+}
+
+img {
+	max-width: 60%;
+	border: #000 5px solid;
+	margin-top: 3%;
+}
