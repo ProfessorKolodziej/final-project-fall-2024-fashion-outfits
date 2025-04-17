@@ -1,4 +1,5 @@
 function handleDragStart(e) {
+	e.dataTransfer.setData("text/plain", this.id);
 	this.style.opacity = '0.4';
 }
 
@@ -21,44 +22,47 @@ mannequinImg.addEventListener("dragover", event => {
 });
 
 document.querySelectorAll(".item").forEach(item => {
-	item.addEventListener("dragstart", e => {
-		e.dataTransfer.setData("text/plain", e.target.src);
-		e.dataTransfer.setData("width", e.target.offsetWidth);
-		e.dataTransfer.setData("height", e.target.offsetHeight);
-	});
+	item.addEventListener('dragstart', handleDragStart);
+	item.addEventListener('dragend', handleDragEnd);
 });
 
 mannequinImg.addEventListener("drop", e => {
 	e.preventDefault();
+	const id = e.dataTransfer.getData("text/plain");
+	const originalElement = document.getElementById(id);
 
-	const src = e.dataTransfer.getData("text/plain");
-	const originalWidth = parseFloat(e.dataTransfer.getData("width"));
-	const originalHeight = parseFloat(e.dataTransfer.getData("height"));
+	console.log(id);
+	console.log(originalElement);
 
-	const newItem = document.createElement("img");
-	newItem.src = src;
-	newItem.className = "item";
-	newItem.draggable = true;
+	const newItem = originalElement.cloneNode(true);
+	console.log(newItem);
+	newItem.id = id + "-dropped";
+
 	newItem.style.position = "absolute";
 
 	// Accurate drop: relative to mannequin image
 	const rect = mannequinImg.getBoundingClientRect();
-	const x = e.clientX - rect.left;
+	const x = e.clientX - rect.left - e.target.offsetWidth / 4;
 	const y = e.clientY - rect.top;
 	newItem.style.left = `${x}px`;
 	newItem.style.top = `${y}px`;
 
 	// Enlarge dropped item a bit (e.g., 1.2x)
-	const scale = 1.8;
-	newItem.style.width = `${originalWidth * scale}px`;
-	newItem.style.height = `${originalHeight * scale}px`;
+	const scale = 1;
 
-	newItem.addEventListener("dragstart", e => {
-		e.dataTransfer.setData("text/plain", e.target.src);
-		e.dataTransfer.setData("width", e.target.offsetWidth / scale); // return to original
-		e.dataTransfer.setData("height", e.target.offsetHeight / scale);
-		mannequinImg.parentElement.removeChild(e.target);
-	});
+	newItem.style.opacity = "1";
+
+	newItem.addEventListener("dragstart", handleDragStart);
+	newItem.addEventListener("dragend", handleDragEnd);
+	newItem.addEventListener("click", removeItem);
 
 	mannequinImg.parentElement.appendChild(newItem);
 });
+
+
+function removeItem(e) {
+	console.log(this);
+	this.remove();
+
+}
+
