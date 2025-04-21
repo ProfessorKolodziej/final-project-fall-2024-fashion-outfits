@@ -51,6 +51,7 @@ p {
 	background-color: #FFF;
 }
 
+
 .outfit {
 	background-color: #8E00FE;
 	position: relative;
@@ -76,83 +77,59 @@ p {
 
 }
 
-
-.mannequin-image-container #brownboots-dropped {
-	width: 30%;
-}
-
 .mannequin-image-container #shortcheetahdress-dropped {
 	width: 55%;
 }
 
-.mannequin-image-container #goldearrings-dropped {
-	width: 20%;
+.mannequin-image-container #longcheetahdress-dropped {
+	width: 75%;
 }
 
-.mannequin-image-container #brownboots-dropped {
-	width: 30%;
-}
-
-.mannequin-image-container #goldtop-dropped {
-	width: 30%;
-}
-
-.mannequin-image-container #browngoldheel-dropped {
-	width: 30%;
-}
-
-.mannequin-image-container #bluedress-dropped {
-	width: 40%;
-}
-
-.mannequin-image-container #brownshorts-dropped {
-	width: 30%;
-}
-
-.mannequin-image-container #whitedress-dropped {
-	width: 40%;
-}
-
-.mannequin-image-container #goldbangle-dropped {
-	width: 20%;
-}
-
-.mannequin-image-container #cavalliheels-dropped {
-	width: 20%;
-}
-
-.mannequin-image-container #goldnecklace-dropped {
-	width: 15%;
-}
-
-.mannequin-image-container #citrinering-dropped {
-	width: 10%;
-}
-
-.mannequin-image-container #blackheels-dropped {
-	width: 25%;
-}
 
 .mannequin-image-container #seashelltop-dropped {
-	width: 30%;
-}
-
-.mannequin-image-container #cavallidress-dropped {
-	width: 65%;
-}
-
-.mannequin-image-container #bluetop-dropped {
-	width: 35%;
+	width: 70%;
 }
 
 .mannequin-image-container #whiteskirt-dropped {
-	width: 25%;
+	width: 70%;
+}
+
+.mannequin-image-container #bluetop-dropped {
+	width: 80%;
+}
+
+
+.mannequin-image-container #brownskirt-dropped {
+	width: 85%;
+}
+
+.mannequin-image-container #brownshorts-dropped {
+	width: 60%;
+}
+
+.mannequin-image-container #goldheels-dropped {
+	width: 60%;
+}
+
+.mannequin-image-container #brownboots-dropped {
+	width: 80%;
 }
 
 .mannequin-image-container #brownskirt-dropped {
-	width: 35%;
+	width: 85%;
 }
 
+.mannequin-image-container #mermaidtop-dropped {
+	width: 80%;
+}
+
+.mannequin-image-container #goldtop-dropped {
+	width: 80%;
+}
+
+.mannequin-image-container #goldnecklace-dropped {
+	width: 45%;
+}
 
 .mannequin-image-container .item {
 	cursor: url('../images/clothes.svg') 16 16, auto;
