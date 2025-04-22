@@ -3,10 +3,12 @@
 /* seasonal outfits start */
 body {
 	text-align: center;
+
 }
 
 .seasonal-container {
 	background-color: #CF92FF;
+	padding-bottom: 3%;
 }
 
 h1 {
@@ -34,6 +36,8 @@ h2 {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	margin-top: -2%;
+	padding-bottom: 4%;
 }
 
 
@@ -49,6 +53,7 @@ h3 {
 	line-height: normal;
 
 }
+
 
 a:hover {
 	background-color: #e0b6ff;
@@ -91,7 +96,27 @@ a {
 
 .sevendays-container {
 	background-color: #B557FF;
+	padding-bottom: 3%;
 }
 
 
 /* 7 days of outfits end */
+
+@media screen and (min-width: 1024px) {
+	.content-container section a {
+		margin: 4% 15%;
+	}
+
+	.content-container img {
+		height: 380px;
+		width: 390px;
+	}
+
+	.content-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: -4%;
+		margin-bottom: -2%;
+	}
+
+}

@@ -40,3 +40,25 @@ img {
 	border: #000 5px solid;
 	margin-top: 3%;
 }
+
+@media screen and (min-width: 1024px) {
+
+	h1 {
+		margin-top: 3%;
+	}
+
+	h3 {
+		margin-top: -1%;
+	}
+
+	.content-container img {
+		height: 480px;
+		width: 350px;
+		margin-top: 0.5%;
+	}
+
+	.content-container {
+		margin-bottom: -6%;
+	}
+
+}

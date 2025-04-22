@@ -2,6 +2,7 @@
 
 body {
 	background-color: #D02E85;
+	padding-bottom: 4%;
 }
 
 h1 {
@@ -25,10 +26,11 @@ h2 {
 	-webkit-text-stroke-width: 2px;
 	-webkit-text-stroke-color: #000;
 	font-family: "Jersey 25";
-	font-size: 50px;
+	font-size: 40px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+	padding-bottom: 4%;
 }
 
 
@@ -42,6 +44,11 @@ h3 {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
+}
+
+.content-container img {
+	height: 200px;
+	width: 380px;
 }
 
 a:hover {
@@ -73,4 +80,27 @@ a {
 	border: #000 10px double;
 	display: block;
 	margin: 4% 20% 5% 20%;
+}
+
+
+@media screen and (min-width: 1024px) {
+	h1 {
+		margin-top: 4%;
+	}
+
+	h2 {
+		margin-bottom: -2%;
+	}
+
+
+	.content-container img {
+		height: 450px;
+		width: 400px;
+	}
+
+	.content-container {
+		margin-bottom: -4%;
+	}
+
+
 }

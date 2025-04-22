@@ -70,7 +70,8 @@ p {
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
-	text-align: initial;
+	text-align: center;
+	padding: 3%;
 }
 
 a {
@@ -88,4 +89,22 @@ a {
 
 a:hover {
 	color: #d90174;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+
+	.seasonaloutfit {
+		justify-content: center;
+		margin-top: 1%;
+		padding-bottom: 6%;
+	}
+
+	p {
+		padding-right: 9%;
+		padding-left: 5%;
+	}
+
+
 }
