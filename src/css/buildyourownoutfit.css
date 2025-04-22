@@ -5,7 +5,7 @@ body {
 	font-family: sans-serif;
 	display: flex;
 	gap: 20px;
-	padding: 20px;
+	padding: 1% 2% 4% 2%;
 	text-align: center;
 	justify-content: center;
 }
@@ -22,7 +22,25 @@ h1 {
 	font-weight: 400;
 	line-height: normal;
 	padding: 0% 5%;
+	text-transform: uppercase;
 
+}
+
+#scroll-text {
+	padding-bottom: 2%;
+}
+
+#redrag-text {
+	background-color: deeppink;
+	padding: 3%;
+	margin-top: -3%;
+	text-transform: uppercase;
+}
+
+#drag-text {
+	text-transform: uppercase;
+	margin-top: 4%;
+	margin-left: 5%;
 }
 
 p {
@@ -39,16 +57,17 @@ p {
 
 .items,
 .outfit {
-	padding: 10px;
 	justify-content: center;
-	height: 250px;
+	height: 100%;
 	overflow-y: auto;
+
 }
 
 .items {
 	border: 4px solid black;
-	padding: 0% 10% 20% 10%;
 	background-color: #FFF;
+	padding-top: 3%;
+	margin-bottom: -2%;
 }
 
 
@@ -58,13 +77,15 @@ p {
 }
 
 .item {
-	width: 90px;
-	margin: 5px;
+	width: 250px;
+	margin: 10px;
 	cursor: grab;
 }
 
 .mannequin {
 	width: 100px;
+	padding-left: 12%;
+	padding-top: 8%;
 	/* or whatever fits your layout */
 }
 
@@ -73,64 +94,65 @@ p {
 }
 
 #image-mannequin {
-	width: 453px;
+	width: 600px;
+	align-content: first baseline;
 
 }
 
-.mannequin-image-container #shortcheetahdress-dropped {
-	width: 55%;
+
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
 }
 
-.mannequin-image-container #longcheetahdress-dropped {
-	width: 75%;
+.container #shortcheetahdress-dropped {
+	transform: scale(3);
 }
 
-
-.mannequin-image-container #seashelltop-dropped {
-	width: 70%;
-}
-
-.mannequin-image-container #whiteskirt-dropped {
-	width: 70%;
-}
-
-.mannequin-image-container #bluetop-dropped {
-	width: 80%;
+.container #orangedress-dropped {
+	transform: scale(2.3);
 }
 
 
-.mannequin-image-container #brownskirt-dropped {
-	width: 85%;
+.container #seashelltop-dropped {
+	transform: scale(1.8);
 }
 
-.mannequin-image-container #brownshorts-dropped {
-	width: 60%;
+.container #pearlbag-dropped {
+	transform: scale(1.5);
 }
 
-.mannequin-image-container #goldheels-dropped {
-	width: 60%;
+.container #whiteskirt-dropped {
+	transform: scale(1.8);
 }
 
-.mannequin-image-container #brownboots-dropped {
-	width: 80%;
+
+.container #brownskirt-dropped {
+	transform: scale(2.3);
 }
 
-.mannequin-image-container #brownskirt-dropped {
-	width: 85%;
+.container #brownshorts-dropped {
+	transform: scale(1.5);
 }
 
-.mannequin-image-container #mermaidtop-dropped {
-	width: 80%;
+.container #goldheels-dropped {
+	transform: scale(1.5);
 }
 
-.mannequin-image-container #goldtop-dropped {
-	width: 80%;
+.container #brownboots-dropped {
+	transform: scale(2);
 }
 
-.mannequin-image-container #goldnecklace-dropped {
-	width: 45%;
+.container #mermaidtop-dropped {
+	transform: scale(2);
 }
 
-.mannequin-image-container .item {
-	cursor: url('../images/clothes.svg') 16 16, auto;
+.container #goldtop-dropped {
+	transform: scale(1.9);
+}
+
+
+.container #goldbag-dropped {
+	transform: scale(1.5);
 }

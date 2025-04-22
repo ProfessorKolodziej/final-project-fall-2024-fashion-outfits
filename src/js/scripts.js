@@ -1,68 +1,128 @@
-function handleDragStart(e) {
-	e.dataTransfer.setData("text/plain", this.id);
-	this.style.opacity = '0.4';
-}
+// Get the elements we need
+const dragZone = document.getElementById('items');
+const dropZone = document.getElementById('outfit');
+const squares = document.querySelectorAll('.item');
 
-function handleDragEnd(e) {
-	this.style.opacity = '1';
-}
+// Add drag events to our initial squares
+squares.forEach(square => {
+	// Give each square a unique ID if it doesn't have one
+	if (!square.id) {
+		square.id = 'square-' + Math.random().toString().slice(2, 8);
+	}
 
-let items = document.querySelectorAll('.item');
-items.forEach(function (item) {
-	item.addEventListener('dragstart', handleDragStart);
-	item.addEventListener('dragend', handleDragEnd);
+	// Add drag event
+	addDragEvents(square);
 });
 
-const itemsContainer = document.getElementById("items");
-const outfitContainer = document.getElementById("outfit");
-const mannequinImg = document.querySelector(".mannequin img");
+// Function to add drag events to any square
+function addDragEvents(element) {
+	element.addEventListener('dragstart', function (event) {
+		// Remember which square we're dragging
+		event.dataTransfer.setData('itemSource', this.src);
+		event.dataTransfer.setData('squareId', this.id);
+		event.dataTransfer.setData('squareClass', this.className);
+		// Remember which zone it's coming from
+		event.dataTransfer.setData('sourceZone', this.parentNode.id);
+	});
+}
 
-mannequinImg.addEventListener("dragover", event => {
+// When dragging over the drop zone
+dropZone.addEventListener('dragover', function (event) {
+	// Allow dropping by preventing the default "no drop" behavior
 	event.preventDefault();
 });
 
-document.querySelectorAll(".item").forEach(item => {
-	item.addEventListener('dragstart', handleDragStart);
-	item.addEventListener('dragend', handleDragEnd);
+// When dragging over the drag zone
+dragZone.addEventListener('dragover', function (event) {
+	// Allow dropping by preventing the default "no drop" behavior
+	event.preventDefault();
 });
 
-mannequinImg.addEventListener("drop", e => {
-	e.preventDefault();
-	const id = e.dataTransfer.getData("text/plain");
-	const originalElement = document.getElementById(id);
+// When dropping on the drop zone
+dropZone.addEventListener('drop', function (event) {
+	// Prevent any default browser behavior
+	event.preventDefault();
 
-	console.log(id);
-	console.log(originalElement);
+	// Get information about the source
+	const sourceZone = event.dataTransfer.getData('sourceZone');
+	console.log(sourceZone);
+	// If it's coming from the drag zone, handle it normally
+	if (sourceZone === 'items') {
+		const dropRect = dropZone.getBoundingClientRect();
+		const mouseX = event.clientX - dropRect.left;
+		const mouseY = event.clientY - dropRect.top;
 
-	const newItem = originalElement.cloneNode(true);
-	console.log(newItem);
-	newItem.id = id + "-dropped";
+		// Get information about the square that was dragged
+		const itemSource = event.dataTransfer.getData('itemSource');
+		const squareClass = event.dataTransfer.getData('squareClass');
+		const squareId = event.dataTransfer.getData('squareId');
 
-	newItem.style.position = "absolute";
 
-	// Accurate drop: relative to mannequin image
-	const rect = mannequinImg.getBoundingClientRect();
-	const x = e.clientX - rect.left - e.target.offsetWidth / 4;
-	const y = e.clientY - rect.top;
-	newItem.style.left = `${x}px`;
-	newItem.style.top = `${y}px`;
+		// Create a new square in the drop zone
+		const newSquare = document.createElement('img');
+		newSquare.src = itemSource;
+		newSquare.className = squareClass;
+		newSquare.style.position = 'absolute';
 
-	// Enlarge dropped item a bit (e.g., 1.2x)
-	const scale = 1;
+		// Add square to drop zone temporarily to measure its size
+		newSquare.style.visibility = 'hidden';
+		dropZone.appendChild(newSquare);
 
-	newItem.style.opacity = "1";
+		// Get the width and height of our new square
+		const width = newSquare.offsetWidth;
+		console.log(width);
+		const height = newSquare.offsetHeight;
+		console.log(height);
 
-	newItem.addEventListener("dragstart", handleDragStart);
-	newItem.addEventListener("dragend", handleDragEnd);
-	newItem.addEventListener("click", removeItem);
+		// Position the square so its center is at the mouse position
+		newSquare.style.left = (mouseX - width / 2) + 'px';
+		newSquare.style.top = (mouseY - height / 2) + 'px';
+		newSquare.style.visibility = 'visible';
 
-	mannequinImg.parentElement.appendChild(newItem);
+		// Make the new square draggable
+		newSquare.draggable = true;
+		newSquare.id = squareId + "-dropped";
+		addDragEvents(newSquare);
+	}
+
+	// Delete the original square
+	const originalId = event.dataTransfer.getData('squareId');
+	const originalSquare = document.getElementById(originalId);
+	if (originalSquare) {
+		originalSquare.remove();
+	}
 });
 
+// When dropping on the drag zone
+dragZone.addEventListener('drop', function (event) {
+	// Prevent any default browser behavior
+	event.preventDefault();
 
-function removeItem(e) {
-	console.log(this);
-	this.remove();
+	// Get information about the source
+	const sourceZone = event.dataTransfer.getData('sourceZone');
 
-}
+	// We only care about squares coming from the drop zone
+	if (sourceZone === 'outfit') {
+		// Get information about the square that was dragged
+		const itemSource = event.dataTransfer.getData('itemSource');
+		const squareClass = event.dataTransfer.getData('squareClass');
 
+		// Create a new square in the drag zone
+		const newSquare = document.createElement('img');
+		newSquare.className = squareClass;
+		newSquare.src = itemSource;
+		newSquare.draggable = true;
+		newSquare.id = 'square-' + Math.random().toString().slice(2, 8);
+		dragZone.appendChild(newSquare);
+
+		// Add drag events to the new square
+		addDragEvents(newSquare);
+	}
+
+	// Delete the original square
+	const originalId = event.dataTransfer.getData('squareId');
+	const originalSquare = document.getElementById(originalId);
+	if (originalSquare) {
+		originalSquare.remove();
+	}
+});
