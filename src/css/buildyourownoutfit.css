@@ -59,7 +59,6 @@ p {
 .outfit {
 	justify-content: center;
 	height: 100%;
-	overflow-y: auto;
 
 }
 
@@ -95,7 +94,7 @@ p {
 
 #image-mannequin {
 	width: 600px;
-	align-content: first baseline;
+	padding-left: 50%;
 
 }
 
@@ -155,4 +154,31 @@ p {
 
 .container #goldbag-dropped {
 	transform: scale(1.5);
+}
+
+
+@media screen and (min-width: 1024px) {
+
+	body {
+		margin-right: -10%;
+	}
+
+	.item {
+		width: 220px;
+
+	}
+
+	#image-mannequin {
+		width: 600px;
+		margin-left: -995%;
+
+	}
+
+	.container {
+		width: 93%;
+	}
+
+	.outfit {
+		width: 93%;
+	}
 }

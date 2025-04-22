@@ -104,3 +104,27 @@ a {
 
 
 }
+
+@media only screen and (min-width: 1440px) {
+
+	body {
+		padding-bottom: 5%;
+		margin-top: -3%;
+	}
+
+	h2 {
+		margin-top: 1%;
+	}
+
+	.seasonal-container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+	}
+
+	.seasonal-container img {
+		height: 220px;
+		width: 220px;
+
+	}
+}
