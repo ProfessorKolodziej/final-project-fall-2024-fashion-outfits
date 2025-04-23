@@ -93,9 +93,10 @@ a {
 	}
 
 
+
 	.content-container img {
-		height: 450px;
-		width: 400px;
+		height: 420px;
+		width: 500px;
 	}
 
 	.content-container {
@@ -124,7 +125,7 @@ a {
 
 	.seasonal-container img {
 		height: 220px;
-		width: 220px;
+		width: 200px;
 
 	}
 }

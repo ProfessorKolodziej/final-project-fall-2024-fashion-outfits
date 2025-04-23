@@ -108,3 +108,19 @@ a:hover {
 
 
 }
+
+
+@media only screen and (min-width: 1440px) {
+
+	.seasonaloutfit p {
+		margin-left: -25%;
+		margin-top: -1%;
+	}
+
+	.seasonaloutfit img {
+		margin-right: -30%;
+		margin-top: -2%;
+		height: 590px;
+		width: 280px;
+	}
+}

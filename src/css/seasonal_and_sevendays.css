@@ -121,3 +121,18 @@ a {
 
 
 }
+
+
+@media only screen and (min-width: 1440px) {
+
+	h1 {
+		margin-top: 1%;
+	}
+
+
+	.content-container img {
+		height: 330px;
+		width: 180px;
+
+	}
+}
