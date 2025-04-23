@@ -156,6 +156,8 @@ p {
 }
 
 
+@media screen and (orientation:landscape) and (min-width: 834px) {}
+
 @media screen and (min-width: 1024px) {
 
 	body {
@@ -187,7 +189,7 @@ p {
 
 
 	h1 {
-		margin-top: -1%;
+		margin-top: 3%;
 	}
 
 	body {
@@ -197,9 +199,6 @@ p {
 	#drag-text {
 		justify-items: center;
 	}
-
-
-
 
 
 }
