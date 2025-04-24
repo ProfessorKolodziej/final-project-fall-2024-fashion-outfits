@@ -49,6 +49,7 @@ h3 {
 .content-container img {
 	height: 200px;
 	width: 380px;
+	object-fit: cover;
 }
 
 a:hover {

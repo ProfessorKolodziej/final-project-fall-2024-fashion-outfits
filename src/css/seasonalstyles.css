@@ -58,6 +58,7 @@ h3 {
 img {
 	max-width: 50%;
 	border: #000 5px solid;
+	object-fit: cover;
 
 }
 

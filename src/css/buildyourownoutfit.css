@@ -5,7 +5,8 @@ body {
 	font-family: sans-serif;
 	display: flex;
 	gap: 20px;
-	padding: 1% 2% 4% 2%;
+	padding-left: 3vw;
+	padding-bottom: 5vw;
 	text-align: center;
 	justify-content: center;
 }
@@ -43,6 +44,10 @@ h1 {
 	margin-left: 5%;
 }
 
+#rotate-text {
+	display: none;
+}
+
 p {
 	color: #FFF;
 	text-align: center;
@@ -78,30 +83,30 @@ p {
 .item {
 	margin: 10px;
 	cursor: grab;
+	width: 220px;
+
+
 }
 
 .mannequin {
-	width: 100px;
-	padding-left: 12%;
+	margin: 0 auto;
 	padding-top: 8%;
 	/* or whatever fits your layout */
 }
 
-.mannequin-image-container {
-	width: 10%;
-}
 
 #image-mannequin {
-	width: 600px;
-	padding-left: 50%;
-
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
 }
 
 
 
 .container {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(2, 50%);
+	margin: 0 auto;
 }
 
 .container #shortcheetahdress-dropped {
@@ -156,22 +161,24 @@ p {
 }
 
 
-@media screen and (orientation:landscape) and (min-width: 834px) {}
+@media (orientation: portrait) {
+
+	.container {
+		display: none;
+	}
+
+	#rotate-text {
+		display: block;
+	}
+
+}
+
 
 @media screen and (min-width: 1024px) {
 
-	body {
-		margin-right: -10%;
-	}
-
-	.item {
-		width: 220px;
-
-	}
 
 	#image-mannequin {
 		width: 600px;
-		margin-left: -995%;
 
 	}
 
@@ -180,7 +187,7 @@ p {
 	}
 
 	.outfit {
-		width: 53%;
+		width: 100%;
 	}
 }
 
@@ -192,13 +199,12 @@ p {
 		margin-top: 3%;
 	}
 
-	body {
-		margin-right: 5%;
-	}
+
 
 	#drag-text {
 		justify-items: center;
 	}
+
 
 
 }
