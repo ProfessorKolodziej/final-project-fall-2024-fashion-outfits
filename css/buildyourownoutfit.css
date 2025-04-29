@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+body {
+	background-color: #8E00FE;
+	font-family: sans-serif;
+	display: flex;
+	gap: 20px;
+	padding-left: 3vw;
+	padding-bottom: 5vw;
+	text-align: center;
+	justify-content: center;
+}
+
+
+h1 {
+	color: #FFF;
+	text-align: center;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: #000;
+	font-family: "Jersey 25";
+	font-size: 65px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	padding: 0% 5%;
+	text-transform: uppercase;
+
+}
+
+#scroll-text {
+	padding-bottom: 2%;
+}
+
+#redrag-text {
+	background-color: deeppink;
+	padding: 3%;
+	margin-top: -3%;
+	text-transform: uppercase;
+}
+
+#drag-text {
+	text-transform: uppercase;
+	margin-top: 4%;
+	margin-left: 5%;
+}
+
+#rotate-text {
+	display: none;
+}
+
+p {
+	color: #FFF;
+	text-align: center;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #000;
+	font-family: "Jersey 25";
+	font-size: 35px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
+.items,
+.outfit {
+	justify-content: center;
+	height: 100%;
+
+}
+
+.items {
+	border: 4px solid black;
+	background-color: #FFF;
+	padding-top: 3%;
+	margin-bottom: -2%;
+}
+
+
+.outfit {
+	background-color: #8E00FE;
+	position: relative;
+}
+
+.item {
+	margin: 10px;
+	cursor: grab;
+	width: 220px;
+
+
+}
+
+.mannequin {
+	margin: 0 auto;
+	padding-top: 8%;
+	/* or whatever fits your layout */
+}
+
+
+#image-mannequin {
+	width: 100%;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+
+
+.container {
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	margin: 0 auto;
+}
+
+.container #shortcheetahdress-dropped {
+	transform: scale(3);
+}
+
+.container #orangedress-dropped {
+	transform: scale(2.3);
+}
+
+
+.container #seashelltop-dropped {
+	transform: scale(1.8);
+}
+
+.container #pearlbag-dropped {
+	transform: scale(1.5);
+}
+
+.container #whiteskirt-dropped {
+	transform: scale(1.8);
+}
+
+
+.container #brownskirt-dropped {
+	transform: scale(2.3);
+}
+
+.container #brownshorts-dropped {
+	transform: scale(1.5);
+}
+
+.container #goldheels-dropped {
+	transform: scale(1.5);
+}
+
+.container #brownboots-dropped {
+	transform: scale(2);
+}
+
+.container #mermaidtop-dropped {
+	transform: scale(2);
+}
+
+.container #goldtop-dropped {
+	transform: scale(1.9);
+}
+
+
+.container #goldbag-dropped {
+	transform: scale(1.5);
+}
+
+
+@media (orientation: portrait) {
+
+	.container {
+		display: none;
+	}
+
+	#rotate-text {
+		display: block;
+	}
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+
+	#image-mannequin {
+		width: 600px;
+
+	}
+
+	.container {
+		width: 93%;
+	}
+
+	.outfit {
+		width: 100%;
+	}
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+
+	h1 {
+		margin-top: 3%;
+	}
+
+
+
+	#drag-text {
+		justify-items: center;
+	}
+
+
+
+}

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+/* seasonal outfits start */
+body {
+	text-align: center;
+
+}
+
+.seasonal-container {
+	background-color: #CF92FF;
+	padding-bottom: 3%;
+}
+
+h1 {
+	color: #FFF;
+	text-align: center;
+	-webkit-text-stroke-width: 3px;
+	-webkit-text-stroke-color: #000;
+	font-family: "Jersey 25";
+	font-size: 65px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	padding: 3% 5% 0% 5%;
+	text-transform: uppercase;
+
+}
+
+h2 {
+	color: #FFF;
+	text-align: center;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #000;
+	font-family: "Jersey 25";
+	font-size: 40px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	margin-top: -2%;
+	padding-bottom: 4%;
+}
+
+
+h3 {
+	color: #FFF;
+	text-align: center;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #000;
+	font-family: "Jersey 25";
+	font-size: 45px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+
+}
+
+
+a:hover {
+	background-color: #e0b6ff;
+
+}
+
+img {
+	max-width: 60%;
+	border: #000 5px solid;
+	margin-top: 5%;
+	object-fit: cover;
+
+}
+
+.springoutfit {
+	text-align: center;
+}
+
+.summeroutfit {
+	text-align: center;
+}
+
+.falloutfit {
+	text-align: center;
+}
+
+.winteroutfit {
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	border: #000 10px double;
+	display: block;
+	margin: 4% 20% 5% 20%;
+}
+
+/* seasonal outfits end*/
+
+/* 7 days of outfits start */
+
+.sevendays-container {
+	background-color: #B557FF;
+	padding-bottom: 3%;
+}
+
+
+/* 7 days of outfits end */
+
+@media screen and (min-width: 1024px) {
+	.content-container section a {
+		margin: 4% 15%;
+	}
+
+	.content-container img {
+		height: 380px;
+		width: 390px;
+	}
+
+	.content-container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		margin-top: -4%;
+		margin-bottom: -2%;
+	}
+
+
+}
+
+
+@media only screen and (min-width: 1440px) {
+
+	h1 {
+		margin-top: 1%;
+	}
+
+
+	.content-container img {
+		height: 330px;
+		width: 180px;
+
+	}
+}
